@@ -1,0 +1,97 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Quantum Theory Group</title>
+    <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js">
+    </script>
+    <script type="text/javascript" src="js/scripts.js">
+    </script>
+    <style type="text/css">
+        .centeredImage {
+            text-align: center;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            padding: 0px;
+        }
+    </style>
+
+<script type="text/javascript">
+  function blink() {
+  var blinks = document.getElementsByTagName('blink');
+  for (var i = blinks.length - 1; i >= 0; i--) {
+  var s = blinks[i];
+  s.style.visibility = (s.style.visibility === 'visible') ? 'hidden' : 'visible';
+}
+window.setTimeout(blink, 1500);
+}
+if (document.addEventListener) document.addEventListener("DOMContentLoaded", blink, false);
+else if (window.addEventListener) window.addEventListener("load", blink, false);
+else if (window.attachEvent) window.attachEvent("onload", blink);
+else window.onload = blink; </script>
+</head>
+
+<head>
+<style>
+hmine { 
+    display: block;
+    font-size: 1.5em;
+    margin-top: 1.67em;
+    margin-bottom: 1.em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1 id="logo"><txtlogo> Quantum Theory Group </txtlog>, <txtlogo> University of Ottawa </txtlogo></h1>
+        <br style="clear:both;" />
+
+<!--GROUP PHOTO -->
+
+<!--INTRODUCTION -->
+
+          <div id="text"> 
+               <center> <font color="black" size="8" face="verdana" > QNANO </font> </center> <br/>
+               <center> <font color="black" size="6">  <pbold> A computational platform to model million-atom nanostructures </pbold> </font> </center>
+               <br style="clear:both;" />
+
+             <div id="block" style="width: 40%; float:left"><br/>
+              <img src="./qnano/disk_shaped_dot.png", width=85% /> <br/><br/><br/>
+              <img src="./qnano/cd_se_nanocrystal.png", width=85% /> <br/><br/> <br/>
+              <img src="./qnano/graphene_dot.png", width=85% /> <br/><br/><br/>
+              <img src="./qnano/tmdc_monolayer.png", width=85% /> <br/></br></br>
+              <img src="./qnano/si-100.png", width=90% /> <br/>
+             </div>
+
+             <div id="block" style="width: 60%; float:left">
+                 <br style="clear:both;" />            
+                 <p align="justify"> <font size="5.5"> </br></br></br>
+QNANO is a computational platform for the predictive simulation of the electronic and optical properties of million atom semiconductor and graphene nanostructures. QNANO starts with atomistic definition of the nanostructure, e.g., InAs quantum dot in GaAS or InP or graphene quantum dot. Different materials result in long range strain. Using in-house conjugated gradient methods the total elastic energy for up to billion atom nanostructures is minimized and equillibrium atomic positions obtained. The single-particle wavefunctions for up to a million atoms are expanded as a linear combination of atomic s, p3, d5 and s* orbitals (LCAO). The expansion coefficients are obtained by diagonalizing a parametrized tight-binding (TB) Hamiltonian for up to a million atoms. The parametrization involves ab-initio and TB calculation of the electronic bandstructure corresponding to atomic positions in strained material. The single particle levels are used as input to the atomistic calculation of Coulomb and dipole matrix elements. Hartree-Fock and DFT methods coupled with Configuration Interaction are used to compute exciton, charged exciton and multi-exciton emission and absorption spectra, Auger scattering  and transport coefficients.
+	The underlying lattice structure, symmetry, strain and disorder in investigated nanostructures are self-contained in QNANO. Different predefined shapes of the model nanostructures, self-assembled quantum dots, nanocrystals and graphene qdots are available. The optimized numerical algorithms for elastic energy minimization, genetic algorithms for bandstructure fitting, diagonalization of large matrices, evaluation of electron-electron Coulomb matrix elements and efficient exact diagonalization tools are at the core of the QNANO. <br/><br/></br>
+
+                 <ul style="list-style-type:square"> <font size="5" face="Times New Roman">
+
+                 <li> REFERENCES can be consulted in this <a href="./qnano/references_qnano.pdf"> link</a>. </li> 
+                 <li>  Presentation about the methodologies implemented in QNANO: <a href="./qnano/hawrylak-qnano-march2017.pdf"> QNANO</a>. </li> 
+                 <li>  <a href="QnanoHTML/index.html">DOCUMENTATION</a>. </li> 
+                 <li>  If you are interested in further details about QNANO, please contact Prof. Pawel Hawrylak by email: <a href="mailto:Pawel.Hawrylak@uottawa.ca"> pawel.hawrylak@uottawa.ca </a>. </li>
+                  </font></p>
+             </div>
+          </div>
+
+          <div id="text">
+               <hr />
+               Last modified:
+               <script>document.write(document.lastModified);</script><br />
+               <hr />
+               <br />
+          </div>
+
+   </div></body>
+</html>

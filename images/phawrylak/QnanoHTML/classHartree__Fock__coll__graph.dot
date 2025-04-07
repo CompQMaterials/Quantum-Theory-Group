@@ -1,0 +1,35 @@
+digraph "Hartree_Fock"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Hartree_Fock",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Sparse_Matrix_Generator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSparse__Matrix__Generator.html"];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Organize_Blocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOrganize__Blocks.html"];
+  Node4 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Organize_Blocks_Single",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOrganize__Blocks__Single.html"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Veff_e\nVeff_h\ndense_e\ndense_h" ,fontname="Helvetica"];
+  Node5 [label="template_Tensor2\< std\l::complex\< double \> \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtemplate__Tensor2.html"];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Hmb" ,fontname="Helvetica"];
+  Node6 [label="Manybody_Hamiltonian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classManybody__Hamiltonian.html"];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Organize_Blocks_Single\l_Forward",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOrganize__Blocks__Single__Forward.html"];
+  Node3 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 -> Node7 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" provider" ,fontname="Helvetica"];
+  Node8 [label="Size_Provider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSize__Provider.html"];
+  Node9 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" hilbert" ,fontname="Helvetica"];
+  Node9 [label="Manybody_Hilbert_Space",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classManybody__Hilbert__Space.html"];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" Vhh\nVee\nVdir\nVexc" ,fontname="Helvetica"];
+  Node10 [label="Coulomb_Matrix_Elements",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCoulomb__Matrix__Elements.html"];
+  Node11 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Tensor4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTensor4.html",tooltip="Class to store a rank-4 (complex) tensor: "];
+  Node12 -> Node6 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" cb_energies_mat\nvb_energies_mat" ,fontname="Helvetica"];
+  Node12 [label="QNANO_Matrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classQNANO__Matrix.html"];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Tensor2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classtemplate__Tensor2.html"];
+}

@@ -1,0 +1,19 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Has_Print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHas__Print.html",tooltip="Interface for classes that have a \"print\" function. "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Periodic_Vecs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPeriodic__Vecs.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Select_Orbitals_List",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSelect__Orbitals__List.html"];
+  Node4 [label="List_Class\< Select\l_Orbitals \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classList__Class.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="List_Class\< Vec3d \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classList__Class.html"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="K_Point_List",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classK__Point__List.html"];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Band_Structure",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classBand__Structure.html"];
+  Node5 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

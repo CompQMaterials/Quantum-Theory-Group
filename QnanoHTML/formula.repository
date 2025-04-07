@@ -1,0 +1,17 @@
+\form#0:$ V(\mathbf{r})= a \big[(\mathbf{r}-\mathbf{r}_c)\cdot \mathbf{d}\big]^2 $
+\form#1:$a$
+\form#2:$\mathbf{d}$
+\form#3:$\mathbf{r}_c$
+\form#4:$ a \,r_{tr}^2 $
+\form#5:$ (\mathbf{r}-\mathbf{r}_c)\cdot \mathbf{d} \ge r_{tr}$
+\form#6:$ V(\mathbf{r})= a \big[(\mathbf{r}-\mathbf{r}_c)^2- \big((\mathbf{r}-\mathbf{r}_c)\cdot \mathbf{d}\big)^2\big] $
+\form#7:$V(r)=V_0 \;\mathbf{d}\cdot(\mathbf{r}-\mathbf{r}_0)$
+\form#8:$V_0$
+\form#9:$\mathbf{r}_0$
+\form#10:$ \exp(i k r) $
+\form#11:$ k $
+\form#12:$ r $
+\form#13:$i \in [0,1,\dots,n_{e/h}] $
+\form#14:$ \mathbf{R} $
+\form#15:$\mathbf{r}+\mathbf{R}$
+\form#16:$\mathbf{r}$

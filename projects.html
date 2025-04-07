@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Theory Group</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+
+<head>
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #logo {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Menu styles */
+        nav {
+            background-color: white;
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        /* When the screen is small, change the menu layout */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .menu.show {
+                display: block;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu li {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <h1 id="logo">
+        <txtlogo>Quantum Theory Group</txtlogo>
+    </h1>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="QnanoHTML/index.html">QNANO</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+  
+
+
+    <!--RECENT PROJECTS -->
+    <div id="text">
+        <center><font color="black" size="6" face="verdana">
+            <pbold> Selected recent projects</pbold>
+        </font></center>
+        <br/> <br style="clear:both;"/>
+        <font color="black" size="5" face="Times New Roman">
+        <li><a href="https://qc2dm.physics.uottawa.ca/"> Electron spin based Quantum Circuits in 2D materials </a></li>
+        <br/>
+
+        <div id="block" style="width: 25%; float:left">
+
+            <a href="http://onlinelibrary.wiley.com/doi/10.1002/pssr.v10.1/issuetoc"> <img src="./images/rrl_cover.png"
+                                                                                           , width=60%/> </a> <br/>
+            <br/> <br/> <a href="http://link.springer.com/book/10.1007%2F978-3-662-44611-9"> <img
+                src="./images/graphene_qdots.jpg" width=60%/> </a> <br/> <br/> <br/> <a
+                href="http://www.springer.com/gp/book/9783642720048"> <img src="./images/qdot_book_pawel.jpeg"
+                                                                           width=60%/> </a> <br/>
+        </div>
+
+
+        <div id="block" style="width: 75%; float:left">
+            <ul style="list-style-type:square">
+
+                <li>
+                    <a href="https://qc2dm.physics.uottawa.ca/index.php/projects/"> NSERC STRATEGIC grant: electron spin based Quantum Circuits in 2D Materials (QC2DM), (2018-2021).</a>
+                </li>
+
+                <li> <a href="https://qc2dm.physics.uottawa.ca/index.php/projects/">
+                    NSERC Discovery Grant: Synthetic many-body systems in artificial materials,2019-2024 </a>
+                </li>
+
+                <li>
+                    uOttawa Research Chair in Quantum Theory of Materials, Nanostructures and Devices, (2019-2024)
+                </li>
+
+                <li> <a href="https://qc2dm.physics.uottawa.ca/index.php/projects/">
+                    NRC IoT Challenge Program: Polarisation-resolved single photon sensors using quantum circuits in 2D materials, (2022-2025) </a>
+                </li>
+
+                <li>
+                    NRC Applied Quantum Computing Challenge Program: Advancing design of quantum computing devices based on topological quantum matter using noisy intermediate scale quantum computers, 2023-2025.
+                </li>
+
+                <li>
+                    NSERC Quantum Alliance Consortium (co-PI): Programmable quantum simulators based on 2D materials(PQS2D)
+                </li>
+
+                <li>
+                    NSERC Create on Quantum Materials. (Co-PI )
+                </li>
+
+                <li> B. Jaworowski and P. Hawrylak, ”Quantum bits with macroscopic topologically protected states in semiconductor devices”, Special Issue, Quantum Physical Informatics, D.Ferry, Editor, Applied Science 2019, 9, 474;
+                    <a href="./Papers/applsci-09-00474.pdf"> doi:10.3390/app9030474</a>
+                </li>
+
+                <li> P. Hawrylak, F. Peeters and K. Ensslin, "Carbononics – integrating electronics, photonics and spintronics with graphene quantum dots,"
+                    <a href="http://onlinelibrary.wiley.com/doi/10.1002/pssr.v10.1/issuetoc"> Physica Status Solidi 10, 3-121 (2016).</a>
+                </li>
+
+                <li> A.D. Guclu, P.Potasz, M.Korkusinski and P.Hawrylak, "Graphene Quantum Dots", <a
+                        href="http://link.springer.com/book/10.1007%2F978-3-662-44611-9"> Springer 2014.</a></li>
+
+                <li>C-Y. Hsieh, Y.P. Shim. M. Korkusinski and P. Hawrylak, "Physics of triple quantum dot molecule with controlled electron numbers",
+                    <a href="http://iopscience.iop.org/0034-4885/75/11/114501/article"> Rep. Prog. Phys. 75, 114501 (2012).</a>
+                </li>
+
+                <li>M. Korkusinski and P. Hawrylak, "Coded qubits based on electrons spin", in "Semiconductor quantum bits",
+                    <a href="http://www.crcpress.com/product/isbn/9789814241052"> World Scientific, 2008 </a>; O.Benson and F.Henneberger, Editors.
+                </li>
+
+                <li>P. Hawrylak and M. Korkusinski, "Electronic and optical properties of self-assembled quantum dots" in "Single quantum dots: Fundamentals, Applications, and New Concepts", P. Michler, Editor, Topics in Applied Physics,Vol.90,
+                    <a href="http://link.springer.com/chapter/10.1007/978-3-540-39180-7_2">pp25-92 </a>,Springer-Verlag,(2003).
+                </li>
+
+                <li>Lucjan Jacak, Pawel Hawrylak, and Arek Wojs, "Quantum Dots", <a
+                        href="http://link.springer.com/book/10.1007/978-3-642-72002-4"> Springer Verlag (1998).</a></li>
+
+            </ul>
+        </div>
+        </font>
+    </div>
+
+  
+     <div id="text">
+        <br/> <br/>
+        <font color="black" size="5" face="Times New Roman">
+        <hr/>
+        Last modified:
+        <script>document.write(document.lastModified);</script>
+        <br/>
+        <hr/>
+        <br/> <br/>
+        </font>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+    

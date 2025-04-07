@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TB_Parameter_Id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTB__Parameter__Id.html",tooltip="Structure that lets one identify a parameter by its name. "];
+}

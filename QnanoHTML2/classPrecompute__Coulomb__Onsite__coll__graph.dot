@@ -1,0 +1,16 @@
+digraph "Precompute_Coulomb_Onsite"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="Precompute_Coulomb\l_Onsite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Integrable_Function",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classIntegrable__Function.html",tooltip="Interface for integrable functions. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" solist" ,fontname="Helvetica"];
+  Node3 [label="Slater_Orbital_List",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSlater__Orbital__List.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="List_Class\< Slater\l_Orbital \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classList__Class.html"];
+  Node5 -> Node3 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" orbs" ,fontname="Helvetica"];
+  Node5 [label="Select_Orbitals",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSelect__Orbitals.html"];
+  Node6 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="List_Class\< int \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classList__Class.html"];
+}

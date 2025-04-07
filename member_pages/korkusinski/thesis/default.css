@@ -1,0 +1,40 @@
+/* overall styles */
+
+body {
+   font-family: Verdana, sans-serif;
+   margin-left: 7%;
+   margin-right: 7%;
+   background: white;
+   color: black;
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-family: Verdana, sans-serif;  
+   margin-left: -4%;
+}
+
+p { font-family: Verdana, sans-serif; text-indent: 2em }
+p.ni { font-family: Verdana, sans-serif; text-indent: 0em }
+
+abstract { 
+         font-family: Verdana, sans-serif;
+         margin-left:  5%;
+         margin-right: 5%;
+}
+
+ul { font-family: Verdana, sans-serif; }
+
+em { font-style: italic; }
+
+strong { font-weight: bold; }
+
+/* various link styles */
+
+a { 
+  text-decoration: none;
+}
+
+a:link { color: #0000dd; }
+a:visited { color: #dd0000; }
+a:active { color: #B0B4B0; }
+a:hover { color: red; background: #ffffee; }

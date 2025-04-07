@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Theory Group</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+
+
+<head>
+    <style>
+        /* Basic styles for the page */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #logo {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* Menu styles */
+        nav {
+            background-color: white;
+            text-align: center;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: blue;
+            font-size: 20px;
+        }
+
+        /* Mobile menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 30px;
+            padding: 10px;
+        }
+
+        /* When the screen is small, change the menu layout */
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                text-align: left;
+            }
+
+            .menu.show {
+                display: block;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu li {
+                padding: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <h1 id="logo">
+        <txtlogo>Quantum Theory Group</txtlogo>
+    </h1>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="software.html">Software</a></li>
+            <li><a href="members.html">Members</a></li>
+            <li><a href="QnanoHTML/index.html">QNANO</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
+  
+
+
+    <div id="text">
+        <hr/>
+        </br>
+        <center><font color="black" size="6" face="verdana">
+            <pbold> Electronic structure codes and access to HPC facilities</pbold>
+        </font></center>
+        <br/> <br style="clear:both;"/>
+
+        <div id="block" style="width: 25%; float:left"><br/> <img src="./images/wave_function.jpeg" , width=50%/>
+            <br/><br/> <img src="./images/xc_functionals.jpg" , width=70%/> <br/><br/> <img
+                    src="./images/bse_flowchart.png" , width=70%/> <br/><br/><br/><br/><br/> <img
+                    src="./images/cluster_dell.jpg" , width=70%/>
+        </div>
+
+        <div id="block" style="width: 75%; float:left">
+            <br style="clear:both;"/> <font color="black" size="5" face="Times New Roman">
+            <ul>
+                <li><a href="QNANO.html">
+                    <pbold> QNANO</pbold>
+                </a>: TB + CI. In-house computational platform to model million-atom nanostructures.
+                </li>
+                <br/>
+                <li><a href="https://github.com/jacobmanalo/dmrg_tool">
+                    <pbold> PyMPS</pbold>
+                </a>: MPS-DMRG. In-house computational code to compute the ground state of a many-body system.
+                </li>
+                <br/>
+                <li><a href="https://www.abinit.org"> Abinit </a>: DFT, TDDFT, GW. Plane waves (PW) + pseudopotentials.
+                </li>
+                <br/>
+                <li>
+                    <a href="http://www.octopus-code.org"> Octopus </a>: DFT, TDDFT, Ehrenfest dynamics. Real-space + pseudopotentials.
+                </li>
+                <br/>
+                <li>
+                    <a href="http://www.flapw.de"> Fleur </a>: DFT, TDDTF, GW. Full potential linearized augmented PW (FP-LAPW).
+                </li>
+                <br/>
+                <li>
+                    <a href="http://elk.sourceforge.net/"> ELK </a>: DFT, TDDFT. Full potential linearized augmented PW (FP-LAPW).
+                </li>
+                <br/>
+                <li>
+                    <a href="https://www.cp2k.org/"> CP2K </a>: DFT, TDDFT, Molecular dynamics. Gaussian and PW approaches.
+                </li>
+                <br/>
+                <li>
+                    <a href="http://www.msg.ameslab.gov/gamess/"> Gamess </a>: HF, DFT & TDDFT, CI, CC-SD, MRPT. Gaussian type orbitals.
+                </li>
+                <br/> <br/><br/>
+            </ul>
+        </font>
+            <p align="justify" style="line-height: 1.5"><font color="black" size="5" face="Times New Roman">The group operates a local Linux cluster named Zeus and Hercules with the standard compilers and scientific libraries required by the latter programs. Access to advanced research computing facilities is supported by
+                <a href="https://alliancecan.ca/en"> Digital Research Alliance of Canada </a>. </font></p>
+        </div>
+    </div>
+
+     <div id="text">
+        <br/> <br/>
+        <font color="black" size="5" face="Times New Roman">
+        <hr/>
+        Last modified:
+        <script>document.write(document.lastModified);</script>
+        <br/>
+        <hr/>
+        <br/> <br/>
+        </font>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+    

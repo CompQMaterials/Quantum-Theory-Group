@@ -1,0 +1,12 @@
+#
+# To follow the IMS management regulations, pages in users' "public_html"
+# directories may only be accessed from within NRC.
+#
+# This file is owned by "root", and may not be modified.
+#
+<Limit GET>
+order deny,allow
+deny from all
+allow from 132.246
+allow from nrc.ca
+</Limit>

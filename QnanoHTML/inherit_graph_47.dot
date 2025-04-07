@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Multivar_Function_Template\< T \>",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classMultivar__Function__Template.html",tooltip="Template for function with multiple double variables. "];
+}

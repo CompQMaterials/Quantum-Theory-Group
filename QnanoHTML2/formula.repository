@@ -1,0 +1,11 @@
+\form#0:$V(r)=V_0 \;\mathbf{d}\cdot(\mathbf{r}-\mathbf{r}_0)$
+\form#1:$V_0$
+\form#2:$\mathbf{r}_0$
+\form#3:$\mathbf{d}$
+\form#4:$ \exp(i k r) $
+\form#5:$ k $
+\form#6:$ r $
+\form#7:$i \in [0,1,\dots,n_{e/h}] $
+\form#8:$ \mathbf{R} $
+\form#9:$\mathbf{r}+\mathbf{R}$
+\form#10:$\mathbf{r}$

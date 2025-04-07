@@ -1,0 +1,23 @@
+digraph "Sparse_Matrix_Generator"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Sparse_Matrix_Generator",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Organize_Blocks",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classOrganize__Blocks.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Hartree_Fock",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classHartree__Fock.html"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Manybody_Hamiltonian",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classManybody__Hamiltonian.html"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Sparse_Matrix_Generator\l_From_File",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSparse__Matrix__Generator__From__File.html"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Sparse_Matrix_Generator\l_Organize_By_List",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classSparse__Matrix__Generator__Organize__By__List.html"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TB_Model",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTB__Model.html"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TB_Model_Slater_Koster",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTB__Model__Slater__Koster.html"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TB_Model_spdsstar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classTB__Model__spdsstar.html"];
+}
