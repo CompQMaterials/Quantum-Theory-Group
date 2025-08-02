@@ -1,170 +1,184 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html>
+<html lang="en">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantum Theory Group</title>
+    <title>News & Publications - Quantum Theory of Materials</title>
+    <meta name="description"
+        content="Recent publications and news from the Quantum Theory of Materials research group at the University of Ottawa">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-</head>
-
-
-<head>
-    <style>
-        /* Basic styles for the page */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        #logo {
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Menu styles */
-        nav {
-            background-color: white;
-            text-align: center;
-        }
-
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .menu li {
-            margin: 0 15px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: blue;
-            font-size: 20px;
-        }
-
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 30px;
-            padding: 10px;
-        }
-
-        /* When the screen is small, change the menu layout */
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                text-align: left;
-            }
-
-            .menu.show {
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .menu li {
-                padding: 10px 0;
-            }
-        }
-    </style>
+    <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/cross-browser-compatibility.js" defer></script>
+    <script type="text/javascript" src="js/navigation.js" defer></script>
+    <script type="text/javascript" src="js/image-optimizer.js" defer></script>
+    <script type="text/javascript" src="js/micro-interactions.js" defer></script>
+    <script type="text/javascript" src="js/html-validator.js" defer></script>
+    <script type="text/javascript" src="js/browser-testing.js" defer></script>
 </head>
 
 <body>
-<div class="wrap">
-    <h1 id="logo">
-        <txtlogo>Quantum Theory Group</txtlogo>
-    </h1>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="menu" id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="software.html">Software</a></li>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="QnanoHTML/index.html">QNANO</a></li>
-        </ul>
-    </nav>
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <h1 class="site-logo">
+                <a href="index.html">Quantum Theory of Materials, University of Ottawa</a>
+            </h1>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"
+                    aria-controls="main-navigation">
+                    <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <ul class="nav-menu" id="main-navigation" role="navigation" aria-label="Main navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="QnanoHTML/index.html">QNANO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main id="main-content">
+            <!-- Page Header -->
+            <header class="page-header">
+                <h1>News & Publications</h1>
+                <p class="page-description">
+                    Recent publications and research highlights from our quantum theory group
+                </p>
+            </header>
+
+            <!-- Publications Section -->
+            <section class="publications-section" aria-labelledby="publications-heading">
+                <h2 id="publications-heading" class="publications-title">Selected Recent Publications</h2>
+
+                <div class="publications-list" role="list">
+                    <article class="publication-item" role="listitem">
+                        <h3 class="publication-title">
+                            <a href="./Papers/nanomaterials-13-02293-v2.pdf" class="publication-link" target="_blank"
+                                rel="noopener noreferrer" aria-describedby="pub1-desc"
+                                aria-label="Download PDF: Majorana excitons in a Kitaev chain of semiconductor quantum dots in a nanowire">
+                                Majorana excitons in a Kitaev chain of semiconductor quantum dots in a nanowire
+                            </a>
+                        </h3>
+                        <div class="publication-meta">
+                            <span class="publication-type" aria-label="Publication type">Research Article</span>
+                            <span class="publication-format" aria-label="File format">PDF</span>
+                        </div>
+                        <p id="pub1-desc" class="publication-description">
+                            Investigation of Majorana excitons in quantum dot chains with potential applications in
+                            topological quantum computing.
+                        </p>
+                    </article>
+
+                    <article class="publication-item" role="listitem">
+                        <h3 class="publication-title">
+                            <a href="./Papers/acs.nanolett.3c00406.pdf" class="publication-link" target="_blank"
+                                rel="noopener noreferrer" aria-describedby="pub2-desc">
+                                Theory of Excitons in Gated Bilayer Graphene Quantum Dots
+                            </a>
+                        </h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">Research Article</span>
+                            <span class="publication-format">PDF</span>
+                        </div>
+                        <p id="pub2-desc" class="publication-description">
+                            Theoretical analysis of excitonic properties in electrically gated bilayer graphene quantum
+                            dots.
+                        </p>
+                    </article>
+
+                    <article class="publication-item" role="listitem">
+                        <h3 class="publication-title">
+                            <a href="./Papers/2106.15090.pdf" class="publication-link" target="_blank"
+                                rel="noopener noreferrer" aria-describedby="pub3-desc">
+                                Spin-valley qubits in gated quantum dots in a single layer of transition metal
+                                dichalcogenides
+                            </a>
+                        </h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">Research Article</span>
+                            <span class="publication-format">PDF</span>
+                        </div>
+                        <p id="pub3-desc" class="publication-description">
+                            Exploration of spin-valley qubits in TMD quantum dots for quantum information applications.
+                        </p>
+                    </article>
+
+                    <article class="publication-item" role="listitem">
+                        <h3 class="publication-title">
+                            <a href="https://arxiv.org/abs/2005.04467" class="publication-link external-link"
+                                target="_blank" rel="noopener noreferrer" aria-describedby="pub4-desc">
+                                Valley and spin polarized broken symmetry states of interacting electrons in gated MoS₂
+                                quantum dots
+                            </a>
+                        </h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">Preprint</span>
+                            <span class="publication-format">arXiv</span>
+                        </div>
+                        <p id="pub4-desc" class="publication-description">
+                            Study of symmetry breaking in interacting electron systems within molybdenum disulfide
+                            quantum dots.
+                        </p>
+                    </article>
+
+                    <article class="publication-item" role="listitem">
+                        <h3 class="publication-title">
+                            <a href="./Papers/fan-voznyy-nature2017-compressed.pdf" class="publication-link"
+                                target="_blank" rel="noopener noreferrer" aria-describedby="pub5-desc">
+                                Continuous-wave lasing in colloidal quantum dot solids enabled by facet-selective
+                                epitaxy
+                            </a>
+                        </h3>
+                        <div class="publication-meta">
+                            <span class="publication-type">Research Article</span>
+                            <span class="publication-format">PDF</span>
+                        </div>
+                        <p id="pub5-desc" class="publication-description">
+                            Development of continuous-wave lasing in quantum dot solids through controlled epitaxial
+                            growth.
+                        </p>
+                    </article>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="publications-cta">
+                    <p>For a complete list of publications and preprints, please visit our group members' individual
+                        pages or contact us directly.</p>
+                </div>
+            </section>
+
+            <!-- Page Footer -->
+            <footer class="page-footer">
+                <p>
+                    Last modified: <span id="last-modified"></span>
+                </p>
+            </footer>
+        </main>
+    </div>
 
     <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
+        // Update last modified date
+        document.getElementById('last-modified').textContent = document.lastModified;
     </script>
 
 
-
-
-     <!--RECENT NEWS -->
-    <div id="text">
-        <center><font color="black" size="6" face="verdana">
-            <pbold> Selected recent news</pbold>
-        </font></center>
-        <br/> <br style="clear:both;"/>
-        <font color="black" size="5" face="Times New Roman">
-
-            <li><a
-                    href="./Papers/nanomaterials-13-02293-v2.pdf"> Majorana excitons in a Kitaev chain of semiconductor quantum dots in a nanowire </a>
-            </li>
-
-            <li><a
-                    href="./Papers/acs.nanolett.3c00406.pdf"> Theory of Excitons in Gated Bilayer Graphene Quantum Dots </a>
-            </li>
-
-            <li><a
-                    href="./Papers/2106.15090.pdf"> Spin-valley qubits in gated quantum dots in a single layer of transition metal dichalcogenides </a>
-            </li>
-
-        <li><a
-                href="https://arxiv.org/abs/2005.04467"> Valley and spin polarized broken symmetry states of interacting electrons in gated MoS2 quantum dots </a>
-        </li>
-
-        <li><a
-                href="./Papers/fan-voznyy-nature2017-compressed.pdf"> Continuous-wave lasing in colloidal quantum dot solids enabled by facet-selective epitaxy WS2 </a>
-        </li>
-        </font>
-    </div>
-    <hr/>
-    </br>
-
-    
-    
-
-
-    <div id="text">
-        <br/> <br/>
-        <font color="black" size="5" face="Times New Roman">
-        <hr/>
-        Last modified:
-        <script>document.write(document.lastModified);</script>
-        <br/>
-        <hr/>
-        <br/> <br/>
-        </font>
-    </div>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
-    

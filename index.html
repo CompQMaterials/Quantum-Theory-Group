@@ -1,212 +1,121 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Theory of Materials</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/scripts.js"></script>
-</head>
-
-
-<head>
-    <style>
-        /* Basic styles for the page */
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        #logo {
-            text-align: center;
-            font-size: 2em;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        /* Menu styles */
-        nav {
-            background-color: white;
-            text-align: center;
-        }
-
-        .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .menu li {
-            margin: 0 15px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: blue;
-            font-size: 20px;
-        }
-
-        /* Mobile menu */
-        .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 30px;
-            padding: 10px;
-        }
-
-        /* When the screen is small, change the menu layout */
-        @media (max-width: 768px) {
-            .menu {
-                display: none;
-                flex-direction: column;
-                text-align: left;
-            }
-
-            .menu.show {
-                display: block;
-            }
-
-            .menu-toggle {
-                display: block;
-            }
-
-            .menu li {
-                padding: 10px 0;
-            }
-        }
-    </style>
+    <script type="text/javascript" src="js/cross-browser-compatibility.js" defer></script>
+    <script type="text/javascript" src="js/resource-preloader.js" defer></script>
+    <script type="text/javascript" src="js/navigation.js" defer></script>
+    <script type="text/javascript" src="js/carousel.js" defer></script>
+    <script type="text/javascript" src="js/image-optimizer.js" defer></script>
+    <script type="text/javascript" src="js/performance-monitor.js" defer></script>
+    <script type="text/javascript" src="js/micro-interactions.js" defer></script>
 </head>
 
 <body>
-<div class="wrap">
-    <h1 id="logo">
-        <txtlogo>Quantum Theory of Materials, University of Ottawa</txtlogo>
-    </h1>
-
-    <!-- Navbar -->
-    <nav>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-        <ul class="menu" id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="software.html">Software</a></li>
-            <li><a href="members.html">Members</a></li>
-            <li><a href="QnanoHTML/index.html">QNANO</a></li>
-        </ul>
-    </nav>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
-        }
-    </script>
-
-    <br style="clear:both;"/>
-    <div id="carouselExampleSlidesOnly" class="carousel carousel-dark slide" data-bs-ride="carousel"
-         data-bs-interval="4000" data-bs-pause="hover">
-
-        <div class="carousel-inner">
-
-             <center>
-                <div class="carousel-item active">
-                    <!--GROUP PHOTO -->
-                    <p class="centeredImage"><img src="./images/group/group_2024.png" width=80%/></p>
-                    <center><font color="black" size="3"> Group Photo 2024</font></center>
-                </div>
-            </center>
-
-            <center>
-                <div class="carousel-item">
-                    <!--GROUP PHOTO -->
-                    <p class="centeredImage"><img src="./images/group/group_2021.png" width=80%/></p>
-                    <center><font color="black" size="3"> Group Photo 2021</font></center>
-                </div>
-            </center>
-
-            <center>
-                <div class="carousel-item">
-                    <!--GROUP PHOTO -->
-                    <p class="centeredImage"><img src="./images/group/group_2019.jpg" width=80%/></p>
-                    <center><font color="black" size="3"> Group Photo 2019</font></center>
-                </div>
-            </center>
-
-            <center>
-                <div class="carousel-item">
-                    <!--GROUP PHOTO -->
-                    <p class="centeredImage"><img src="./images/group/group_2015.jpg" width=80%/></p>
-                    <center><font color="black" size="3"> Group Photo 2015</font></center>
-                </div>
-            </center>
-
-        </div>
-
-        <!-- Carousel Indicators -->
-        <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"></li>
-            <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="3"></li>
-        </ol>
-    </div>
-
-    <button class="carousel-control-prev carousel-dark" type="button" data-bs-target="#carouselExampleSlidesOnly"
-            data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next carousel-dark" type="button" data-bs-target="#carouselExampleSlidesOnly"
-            data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-
-
-    <br style="clear:both;"/>
-    <center><font color="red" size="6"> Group meetings: </font> <font size="6"> Fridays, 3:30 pm @ ARC-460 </font>
-    </center>
-    </br>
-    <hr/>
-    </br>
-
-
-    <!--INTRODUCTION -->
-    <div id="text">
-        <center><font color="black" size="6" face="verdana">
-            <pbold> Introduction</pbold>
-        </font></center>
-        <br/>
-        <!--            <h2> Introduction </h2> -->
-        <p align="justify"><font color="black" size="5"
-                                 face="Times New Roman"> The Quantum Theory group works to develop theoretical and computational tools enabling the design and understanding of advanced materials, developing new quantum functionalities of materials by nanoscale and molecular engineering and translating these functionalities into quantum devices. These devices include new quantum circuits based on graphene and other 2D crystals, low-power and quantum electronics based on electron spin, photonic devices for secure quantum communication, improved solar energy harvesting and sensing at the single atom, electron, photon and spin level. We are particularly interested in designing emerging properties of materials at the many body level - properties of material which cannot be inferred from the properties of its constituents. </font>
-        </p>
-    </div>
-    <hr/>
-    </br>
-
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
-    <div id="text">
-        <br/> <br/>
-        <font color="black" size="5" face="Times New Roman">
-        <hr/>
-        Last modified:
-        <script>document.write(document.lastModified);</script>
-        <br/>
-        <hr/>
-        <br/> <br/>
-        </font>
-    </div>
+    <!-- Site Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <h1 class="site-logo">
+                <a href="index.html">Quantum Theory of Materials, University of Ottawa</a>
+            </h1>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="nav-container">
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+                    <span class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                
+                <ul class="nav-menu" id="main-navigation" role="navigation" aria-label="Main navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="software.html">Software</a></li>
+                    <li><a href="members.html">Members</a></li>
+                    <li><a href="QnanoHTML/index.html">QNANO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<div class="wrap">
+    <main id="main-content">
+        <!-- Group Photos Section -->
+        <section class="hero-section" aria-labelledby="group-photos-heading">
+            <h2 id="group-photos-heading" class="sr-only">Group Photos</h2>
+            <div class="modern-carousel" role="region" aria-label="Group photos carousel" aria-live="polite">
+                <div class="carousel-slide">
+                    <img src="./images/group/group_2024.png" alt="Quantum Theory of Materials research group members gathered together in 2024, showing the current team composition" loading="eager" data-critical="true" width="800" height="600">
+                    <p class="carousel-caption">Group Photo 2024</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="./images/group/group_2021.png" alt="Quantum Theory of Materials research group members gathered together in 2021, showing the team during the pandemic period" loading="lazy" width="800" height="600">
+                    <p class="carousel-caption">Group Photo 2021</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="./images/group/group_2019.jpg" alt="Quantum Theory of Materials research group members gathered together in 2019, showing the pre-pandemic team" loading="lazy" width="800" height="600">
+                    <p class="carousel-caption">Group Photo 2019</p>
+                </div>
+
+                <div class="carousel-slide">
+                    <img src="./images/group/group_2015.jpg" alt="Quantum Theory of Materials research group members gathered together in 2015, showing an earlier team composition" loading="lazy" width="800" height="600">
+                    <p class="carousel-caption">Group Photo 2015</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Meeting Information -->
+        <section class="meeting-info" aria-labelledby="meeting-info-heading">
+            <h2 id="meeting-info-heading" class="sr-only">Group Meeting Information</h2>
+            <p class="meeting-announcement" role="note" aria-label="Important meeting information">
+                <span class="meeting-label">Group meetings:</span> 
+                <span class="meeting-details">Fridays, 3:30 pm @ ARC-460</span>
+            </p>
+        </section>
+
+
+        <!-- Introduction Section -->
+        <section class="introduction-section" aria-labelledby="introduction-heading">
+            <h2 id="introduction-heading">Introduction</h2>
+            <p>The Quantum Theory group works to develop theoretical and computational tools enabling the design and understanding of advanced materials, developing new quantum functionalities of materials by nanoscale and molecular engineering and translating these functionalities into quantum devices. These devices include new quantum circuits based on graphene and other 2D crystals, low-power and quantum electronics based on electron spin, photonic devices for secure quantum communication, improved solar energy harvesting and sensing at the single atom, electron, photon and spin level. We are particularly interested in designing emerging properties of materials at the many body level - properties of material which cannot be inferred from the properties of its constituents.</p>
+        </section>
+    </main>
+    
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p class="last-modified">
+                Last modified: <span id="last-modified-date"></span>
+            </p>
+        </div>
+    </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+
+    
+    <script>
+        // Set last modified date
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastModifiedElement = document.getElementById('last-modified-date');
+            if (lastModifiedElement) {
+                lastModifiedElement.textContent = document.lastModified;
+            }
+        });
+    </script>
 </body>
 
 </html>
