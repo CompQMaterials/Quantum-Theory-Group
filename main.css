@@ -778,18 +778,24 @@ button:focus {
 .member-photo {
   position: relative;
   width: 100%;
-  height: 280px;
   overflow: hidden;
   background: var(--color-gray-100);
   display: flex;
   align-items: center;
   justify-content: center;
+  aspect-ratio: 1 / 1; /* Force square aspect ratio */
+  border-radius: 8px;
+  border: 1px solid var(--color-gray-200);
 }
 
 .member-photo.loading {
   background: linear-gradient(90deg, var(--color-gray-100) 25%, var(--color-gray-200) 50%, var(--color-gray-100) 75%);
   background-size: 200% 100%;
   animation: loading-shimmer 1.5s infinite;
+}
+
+.member-photo.loaded {
+  background: transparent;
 }
 
 @keyframes loading-shimmer {
@@ -802,11 +808,26 @@ button:focus {
 }
 
 .member-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 95%;
+  max-height: 95%;
+  object-fit: contain;
   object-position: center;
   transition: transform var(--transition-normal);
+  border-radius: 4px;
+}
+
+/* Special handling for extremely tall images */
+.member-photo img.tall-image {
+  width: 95%;
+  height: 95%;
+  object-fit: cover;
+  object-position: center 15%; /* Focus on upper portion where face should be */
+}
+
+/* Show more of the image on hover for tall images */
+.member-card:hover .member-photo img.tall-image {
+  object-position: center 25%; /* Show a bit more of the image on hover */
+  transform: scale(1.02); /* Slightly less zoom for tall images */
 }
 
 .member-card:hover .member-photo img {
@@ -1111,7 +1132,8 @@ button:focus {
   }
   
   .member-photo {
-    height: 240px;
+    max-width: 240px;
+    margin: 0 auto; /* Center the square on mobile */
   }
   
   .member-links {

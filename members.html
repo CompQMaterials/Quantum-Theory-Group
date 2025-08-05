@@ -10,6 +10,15 @@
         content="Meet the members of the Quantum Theory of Materials research group at the University of Ottawa">
 
     <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css" />
+
+    <!-- Preload critical member images -->
+    <link rel="preload" href="./images/members/phawrylak_2015.jpg" as="image">
+    <link rel="preload" href="./images/members/daniel2.png" as="image">
+    <link rel="preload" href="./images/members/Alina.jpg" as="image">
+    <link rel="preload" href="./images/members/Kasia.jpg" as="image">
+    <link rel="preload" href="./images/members/antonio.jpg" as="image">
+    <link rel="preload" href="./images/members/PingYuan2.jpg" as="image">
+
     <script type="text/javascript" src="js/cross-browser-compatibility.js" defer></script>
     <script type="text/javascript" src="js/navigation.js" defer></script>
     <script type="text/javascript" src="js/member-cards.js" defer></script>
@@ -19,7 +28,7 @@
 </head>
 
 <body>
- 
+
     <!-- Site Header -->
     <header class="site-header">
         <div class="nav-container">
@@ -75,8 +84,7 @@
                         aria-labelledby="member-hawrylak">
                         <div class="member-photo">
                             <img src="./images/members/phawrylak_2015.jpg"
-                                alt="Portrait photo of Dr. Pawel Hawrylak, Group Leader and Professor of Physics"
-                                loading="lazy">
+                                alt="Portrait photo of Dr. Pawel Hawrylak, Group Leader and Professor of Physics">
                         </div>
                         <div class="member-content">
                             <h3 id="member-hawrylak" class="member-name">Dr. Pawel Hawrylak</h3>
@@ -104,8 +112,7 @@
                         aria-labelledby="member-miravet">
                         <div class="member-photo">
                             <img src="./images/members/daniel2.png"
-                                alt="Portrait photo of Dr. Daniel Miravet, Research Associate specializing in 2D materials and quantum computing"
-                                loading="lazy">
+                                alt="Portrait photo of Dr. Daniel Miravet, Research Associate specializing in 2D materials and quantum computing">
                         </div>
                         <div class="member-content">
                             <h3 id="member-miravet" class="member-name">Dr. Daniel Miravet</h3>
@@ -128,8 +135,7 @@
                     <article class="member-card" data-member-type="phd" role="listitem" aria-labelledby="member-alina">
                         <div class="member-photo">
                             <img src="./images/members/Alina.jpg"
-                                alt="Portrait photo of Alina Wania Rodrigues, PhD student researching 2D materials"
-                                loading="lazy">
+                                alt="Portrait photo of Alina Wania Rodrigues, PhD student researching 2D materials">
                         </div>
                         <div class="member-content">
                             <h3 id="member-alina" class="member-name">Alina Wania Rodrigues</h3>
@@ -151,8 +157,7 @@
                         aria-labelledby="member-katarzyna">
                         <div class="member-photo">
                             <img src="./images/members/Kasia.jpg"
-                                alt="Portrait photo of Katarzyna Sadecka, Exchange PhD student from Wrocław University"
-                                loading="lazy">
+                                alt="Portrait photo of Katarzyna Sadecka, Exchange PhD student from Wrocław University">
                         </div>
                         <div class="member-content">
                             <h3 id="member-katarzyna" class="member-name">Katarzyna Sadecka</h3>
@@ -176,8 +181,7 @@
                         aria-labelledby="member-antonio">
                         <div class="member-photo">
                             <img src="./images/members/antonio.jpg"
-                                alt="Portrait photo of Antonio Souza, Visitor student specializing in machine learning"
-                                loading="lazy">
+                                alt="Portrait photo of Antonio Souza, Visitor student specializing in machine learning">
                         </div>
                         <div class="member-content">
                             <h3 id="member-antonio" class="member-name">Antonio Souza</h3>
@@ -206,7 +210,6 @@
                         <div class="member-photo">
                             <img src="./images/members/MKorkusinski.jpg"
                                 alt="Portrait photo of Dr. Marek Korkusinski, Senior Research Officer at NRC and visiting scientist"
-                                loading="lazy"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="member-photo-placeholder" style="display:none;">👤</div>
                         </div>
@@ -235,7 +238,6 @@
                         <div class="member-photo">
                             <img src="./images/members/maciek.jpg"
                                 alt="Portrait photo of Dr. Maciej Bieniek, Postdoc at Wrocław University specializing in theoretical condensed matter physics"
-                                loading="lazy"
                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                             <div class="member-photo-placeholder" style="display:none;">👤</div>
                         </div>
@@ -259,10 +261,10 @@
                     <article class="member-card" data-member-type="visitor" role="listitem"
                         aria-labelledby="member-pingyuan">
                         <div class="member-photo">
-                            <img src="./images/members/PingYuan.jpg"
+                            <img src="./images/members/PingYuan2.jpg"
                                 alt="Portrait photo of Dr. Lo, Ping-Yuan, Independent Research Fellow specializing in condensed matter theory"
-                                loading="lazy"
-                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                                class="tall-image">
                             <div class="member-photo-placeholder" style="display:none;">👤</div>
                         </div>
                         <div class="member-content">

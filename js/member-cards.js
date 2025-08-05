@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeMemberCards() {
+    // Preload all member images immediately
+    preloadMemberImages();
+    
     // Handle image loading errors
     const memberImages = document.querySelectorAll('.member-photo img');
     
@@ -25,6 +28,43 @@ function initializeMemberCards() {
     
     // Add loading states
     addImageLoadingStates();
+}
+
+function preloadMemberImages() {
+    const memberImages = document.querySelectorAll('.member-photo img');
+    
+    memberImages.forEach(img => {
+        // Remove lazy loading for member photos to ensure immediate loading
+        img.removeAttribute('loading');
+        
+        // Force immediate loading by creating a new image element
+        const preloader = new Image();
+        const photoContainer = img.closest('.member-photo');
+        
+        if (photoContainer) {
+            photoContainer.classList.add('loading');
+        }
+        
+        preloader.onload = function() {
+            // Image loaded successfully, update the original img
+            img.src = this.src;
+            if (photoContainer) {
+                photoContainer.classList.remove('loading');
+                photoContainer.classList.add('loaded');
+            }
+        };
+        
+        preloader.onerror = function() {
+            // Image failed to load
+            if (photoContainer) {
+                photoContainer.classList.remove('loading');
+            }
+            handleImageError(img);
+        };
+        
+        // Start preloading
+        preloader.src = img.src;
+    });
 }
 
 function handleImageError(img) {
