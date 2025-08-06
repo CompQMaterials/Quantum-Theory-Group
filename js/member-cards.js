@@ -3,67 +3,114 @@
  * Handles image loading, fallbacks, and interactions for member cards
  */
 
-document.addEventListener('DOMContentLoaded', function() {
-    initializeMemberCards();
-});
+// Start loading images as early as possible
+(function() {
+    function startEarly() {
+        if (document.readyState === 'loading') {
+            // Try to initialize as soon as possible
+            if (document.body) {
+                initializeMemberCards();
+            } else {
+                document.addEventListener('DOMContentLoaded', initializeMemberCards);
+            }
+        } else {
+            // DOM is already ready
+            initializeMemberCards();
+        }
+    }
+    
+    // Start immediately if possible, otherwise wait for DOM
+    if (document.readyState !== 'loading') {
+        startEarly();
+    } else {
+        document.addEventListener('DOMContentLoaded', startEarly);
+        // Also try on readystatechange as a backup
+        document.addEventListener('readystatechange', function() {
+            if (document.readyState === 'interactive' || document.readyState === 'complete') {
+                startEarly();
+            }
+        });
+    }
+})();
 
 function initializeMemberCards() {
-    // Preload all member images immediately
-    preloadMemberImages();
+    // Force immediate image loading
+    forceImageLoading();
     
     // Handle image loading errors
+    setupErrorHandling();
+    
+    // Add loading states
+    addImageLoadingStates();
+}
+
+function forceImageLoading() {
+    const memberImages = document.querySelectorAll('.member-photo img');
+    
+    memberImages.forEach((img, index) => {
+        const photoContainer = img.closest('.member-photo');
+        
+        // Remove any lazy loading attributes
+        img.removeAttribute('loading');
+        img.removeAttribute('data-src');
+        
+        // Add loading state immediately
+        if (photoContainer) {
+            photoContainer.classList.add('loading');
+        }
+        
+        // Force the browser to start loading the image immediately
+        const originalSrc = img.src;
+        
+        // Create a promise for each image load
+        const imageLoadPromise = new Promise((resolve, reject) => {
+            const tempImg = new Image();
+            
+            tempImg.onload = function() {
+                // Image loaded successfully
+                img.src = originalSrc;
+                img.style.opacity = '1';
+                if (photoContainer) {
+                    photoContainer.classList.remove('loading');
+                    photoContainer.classList.add('loaded');
+                }
+                resolve(img);
+            };
+            
+            tempImg.onerror = function() {
+                // Image failed to load
+                if (photoContainer) {
+                    photoContainer.classList.remove('loading');
+                }
+                handleImageError(img);
+                reject(new Error(`Failed to load image: ${originalSrc}`));
+            };
+            
+            // Start loading with a slight delay to prevent overwhelming the browser
+            setTimeout(() => {
+                tempImg.src = originalSrc;
+            }, index * 50); // Stagger loading by 50ms per image
+        });
+        
+        // Set initial opacity to 0 for smooth fade-in
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 0.3s ease-in-out';
+    });
+}
+
+function setupErrorHandling() {
     const memberImages = document.querySelectorAll('.member-photo img');
     
     memberImages.forEach(img => {
         // Set up error handling
         img.addEventListener('error', function() {
             handleImageError(this);
-        });
+        }, { once: true });
         
         // Check if image is already broken
-        if (!img.complete || img.naturalWidth === 0) {
+        if (img.complete && img.naturalWidth === 0) {
             handleImageError(img);
         }
-    });
-    
-    // Add loading states
-    addImageLoadingStates();
-}
-
-function preloadMemberImages() {
-    const memberImages = document.querySelectorAll('.member-photo img');
-    
-    memberImages.forEach(img => {
-        // Remove lazy loading for member photos to ensure immediate loading
-        img.removeAttribute('loading');
-        
-        // Force immediate loading by creating a new image element
-        const preloader = new Image();
-        const photoContainer = img.closest('.member-photo');
-        
-        if (photoContainer) {
-            photoContainer.classList.add('loading');
-        }
-        
-        preloader.onload = function() {
-            // Image loaded successfully, update the original img
-            img.src = this.src;
-            if (photoContainer) {
-                photoContainer.classList.remove('loading');
-                photoContainer.classList.add('loaded');
-            }
-        };
-        
-        preloader.onerror = function() {
-            // Image failed to load
-            if (photoContainer) {
-                photoContainer.classList.remove('loading');
-            }
-            handleImageError(img);
-        };
-        
-        // Start preloading
-        preloader.src = img.src;
     });
 }
 
@@ -88,22 +135,29 @@ function addImageLoadingStates() {
     memberImages.forEach(img => {
         const photoContainer = img.closest('.member-photo');
         
-        // Add loading state
-        photoContainer.classList.add('loading');
-        
         // Remove loading state when image loads
         img.addEventListener('load', function() {
-            photoContainer.classList.remove('loading');
-        });
+            this.style.opacity = '1';
+            if (photoContainer) {
+                photoContainer.classList.remove('loading');
+                photoContainer.classList.add('loaded');
+            }
+        }, { once: true });
         
         // Remove loading state on error too
         img.addEventListener('error', function() {
-            photoContainer.classList.remove('loading');
-        });
+            if (photoContainer) {
+                photoContainer.classList.remove('loading');
+            }
+        }, { once: true });
         
-        // If image is already loaded
-        if (img.complete) {
-            photoContainer.classList.remove('loading');
+        // If image is already loaded and visible
+        if (img.complete && img.naturalWidth > 0) {
+            img.style.opacity = '1';
+            if (photoContainer) {
+                photoContainer.classList.remove('loading');
+                photoContainer.classList.add('loaded');
+            }
         }
     });
 }

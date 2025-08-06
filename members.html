@@ -11,17 +11,40 @@
 
     <link href="./main.css" media="screen, print" rel="stylesheet" type="text/css" />
 
-    <!-- Preload critical member images -->
-    <link rel="preload" href="./images/members/phawrylak_2015.jpg" as="image">
-    <link rel="preload" href="./images/members/daniel2.png" as="image">
-    <link rel="preload" href="./images/members/Alina.jpg" as="image">
-    <link rel="preload" href="./images/members/Kasia.jpg" as="image">
-    <link rel="preload" href="./images/members/antonio.jpg" as="image">
-    <link rel="preload" href="./images/members/PingYuan2.jpg" as="image">
+    <!-- Preload critical member images with high priority -->
+    <link rel="preload" href="./images/members/phawrylak_2015.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/daniel2.png" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/Alina.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/Kasia.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/antonio.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/PingYuan2.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./images/members/MKorkusinski.jpg" as="image">
+    <link rel="preload" href="./images/members/maciek.jpg" as="image">
+
+    <!-- Inline script to start image loading immediately -->
+    <script>
+        // Start preloading images immediately
+        window.memberImageUrls = [
+            './images/members/phawrylak_2015.jpg',
+            './images/members/daniel2.png',
+            './images/members/Alina.jpg',
+            './images/members/Kasia.jpg',
+            './images/members/antonio.jpg',
+            './images/members/PingYuan2.jpg',
+            './images/members/MKorkusinski.jpg',
+            './images/members/maciek.jpg'
+        ];
+
+        // Preload images immediately
+        window.memberImageUrls.forEach(function (url, index) {
+            var img = new Image();
+            img.src = url;
+        });
+    </script>
 
     <script type="text/javascript" src="js/cross-browser-compatibility.js" defer></script>
     <script type="text/javascript" src="js/navigation.js" defer></script>
-    <script type="text/javascript" src="js/member-cards.js" defer></script>
+    <script type="text/javascript" src="js/member-cards.js"></script>
     <script type="text/javascript" src="js/image-optimizer.js" defer></script>
     <script type="text/javascript" src="js/micro-interactions.js" defer></script>
     <script type="text/javascript" src="js/past-members-dropdown.js" defer></script>

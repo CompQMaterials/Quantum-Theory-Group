@@ -812,8 +812,29 @@ button:focus {
   max-height: 95%;
   object-fit: contain;
   object-position: center;
-  transition: transform var(--transition-normal);
+  transition: transform var(--transition-normal), opacity 0.3s ease-in-out;
   border-radius: 4px;
+  opacity: 0; /* Start invisible, will be made visible by JavaScript */
+}
+
+.member-photo.loaded img {
+  opacity: 1;
+}
+
+/* Fallback: show images after 2 seconds even if JavaScript doesn't load */
+.member-photo img {
+  animation: fallback-show 0.5s ease-in-out 2s forwards;
+}
+
+@keyframes fallback-show {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Override fallback if JavaScript successfully loaded the image */
+.member-photo.loaded img {
+  animation: none;
 }
 
 /* Special handling for extremely tall images */
