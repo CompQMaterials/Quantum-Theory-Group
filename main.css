@@ -967,7 +967,28 @@ button:focus {
 
 /* Section headers for member groups */
 .members-section {
-  margin: var(--space-4xl) 0 var(--space-2xl) 0;
+  margin: var(--space-4xl) 0 var(--space-3xl) 0; /* Increased bottom margin */
+}
+
+.members-section:first-of-type {
+  margin-top: var(--space-2xl); /* Less top margin for first section */
+}
+
+/* Subtle visual differences for member types */
+.member-card[data-member-type="faculty"] {
+  border-left: 4px solid var(--color-primary);
+}
+
+.member-card[data-member-type="postdoc"] {
+  border-left: 4px solid var(--color-secondary);
+}
+
+.member-card[data-member-type="phd"] {
+  border-left: 4px solid var(--color-accent);
+}
+
+.member-card[data-member-type="undergraduate"] {
+  border-left: 4px solid var(--color-success);
 }
 
 .members-section-title {
@@ -2271,19 +2292,19 @@ ul {
 .modern-carousel {
   position: relative;
   width: 100%;
-  max-width: 900px;
+  max-width: 1200px; /* Increased from 900px */
   margin: 0 auto;
-  background-color: var(--color-white);
-  border-radius: var(--radius-lg);
+  background-color: transparent; /* Remove background */
+  border-radius: 0; /* Remove border radius */
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: none; /* Remove shadow/frame */
 }
 
 /* Carousel Slides Container */
 .carousel-slides {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px; /* Increased from 500px */
   overflow: hidden;
 }
 
@@ -2298,7 +2319,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-xl);
+  padding: var(--space-md); /* Reduced padding for bigger images */
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform;
   backface-visibility: hidden;
@@ -2308,15 +2329,15 @@ ul {
 /* Carousel Image */
 .carousel-slide img {
   width: 100%;
-  max-width: 800px;
+  max-width: 1100px; /* Increased from 800px */
   height: auto;
-  max-height: 400px;
+  max-height: 550px; /* Increased from 400px */
   object-fit: contain;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
+  border-radius: 0; /* Remove border radius */
+  box-shadow: none; /* Remove shadow/frame */
   margin-bottom: var(--space-md);
   transition: opacity 300ms ease-in-out;
-  background-color: var(--color-gray-100);
+  background-color: transparent; /* Remove background */
 }
 
 /* Lazy loading placeholder */
@@ -2529,15 +2550,15 @@ ul {
 /* Mobile Styles */
 @media (max-width: 767px) {
   .carousel-slides {
-    height: 400px;
+    height: 450px; /* Increased from 400px */
   }
   
   .carousel-slide {
-    padding: var(--space-lg);
+    padding: var(--space-sm); /* Reduced padding */
   }
   
   .carousel-slide img {
-    max-height: 300px;
+    max-height: 400px; /* Increased from 300px */
   }
   
   .carousel-caption {
@@ -2590,15 +2611,15 @@ ul {
 /* Tablet Styles */
 @media (min-width: 768px) and (max-width: 1023px) {
   .carousel-slides {
-    height: 450px;
+    height: 500px; /* Increased from 450px */
   }
   
   .carousel-slide {
-    padding: var(--space-xl);
+    padding: var(--space-md); /* Reduced padding */
   }
   
   .carousel-slide img {
-    max-height: 350px;
+    max-height: 450px; /* Increased from 350px */
   }
 }
   
