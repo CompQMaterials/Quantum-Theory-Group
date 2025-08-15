@@ -42,6 +42,23 @@ function initializeMemberCards() {
     
     // Add loading states
     addImageLoadingStates();
+    
+    // Handle single-member sections
+    handleSingleMemberSections();
+}
+
+function handleSingleMemberSections() {
+    const memberGrids = document.querySelectorAll('.members-grid');
+    
+    memberGrids.forEach(grid => {
+        const memberCards = grid.querySelectorAll('.member-card');
+        
+        if (memberCards.length === 1) {
+            grid.classList.add('single-member');
+        } else {
+            grid.classList.remove('single-member');
+        }
+    });
 }
 
 function forceImageLoading() {

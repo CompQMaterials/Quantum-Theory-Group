@@ -744,6 +744,7 @@ button:focus {
   grid-template-columns: 1fr;
   gap: var(--space-xl);
   margin: var(--space-2xl) 0;
+  justify-items: center; /* Center all member cards */
 }
 
 @media (min-width: 768px) {
@@ -758,6 +759,29 @@ button:focus {
   }
 }
 
+/* Special styling for sections with only one member */
+.members-grid.single-member {
+  justify-items: center;
+  grid-template-columns: 1fr !important; /* Force single column */
+}
+
+.members-grid.single-member .member-card {
+  max-width: 600px; /* Expand single cards but not too wide */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .members-grid.single-member .member-card {
+    max-width: 700px; /* Slightly wider on larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .members-grid.single-member .member-card {
+    max-width: 800px; /* Even wider on desktop */
+  }
+}
+
 /* Individual member card */
 .member-card {
   background: var(--color-bg-primary);
@@ -766,6 +790,9 @@ button:focus {
   overflow: hidden;
   transition: all var(--transition-normal);
   border: 1px solid var(--color-gray-200);
+  width: 100%;
+  max-width: 400px; /* Default max-width for regular cards */
+  margin: 0 auto; /* Center the cards */
 }
 
 .member-card:hover {
