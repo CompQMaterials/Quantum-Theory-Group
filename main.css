@@ -782,6 +782,11 @@ button:focus {
   }
 }
 
+/* Make the group leader's card larger than regular cards */
+.members-grid.single-member .member-card-leader {
+  max-width: 900px;
+}
+
 /* Individual member card */
 .member-card {
   background: var(--color-bg-primary);
@@ -793,6 +798,33 @@ button:focus {
   width: 100%;
   max-width: 400px; /* Default max-width for regular cards */
   margin: 0 auto; /* Center the cards */
+}
+
+/* Special layout for the group leader card: image on the side, text beside it */
+.member-card-leader {
+  display: grid;
+  grid-template-columns: minmax(260px, 360px) 1fr;
+  align-items: center; /* Vertically center image and text */
+  gap: var(--space-lg);
+}
+
+@media (max-width: 767px) {
+  .member-card-leader {
+    grid-template-columns: 1fr;
+  }
+}
+
+.member-card-leader .member-photo {
+  /* Slightly taller portrait frame (~10% more height than before) */
+  aspect-ratio: 1.21 / 1;
+}
+
+.member-card-leader .member-photo img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Show the full image without cutting it */
 }
 
 .member-card:hover {
@@ -876,6 +908,16 @@ button:focus {
 .member-card:hover .member-photo img.tall-image {
   object-position: center 25%; /* Show a bit more of the image on hover */
   transform: scale(1.02); /* Slightly less zoom for tall images */
+}
+
+/* For the group leader, keep the portrait vertically centered in the card */
+.member-card-leader .member-photo img.tall-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Do not cut the image inside the leader card */
+  object-position: center;
 }
 
 .member-card:hover .member-photo img {
