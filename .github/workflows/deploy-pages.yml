@@ -24,15 +24,12 @@ jobs:
       - name: Prepare trimmed site bundle
         run: |
           mkdir _site
-          rsync -a \
-            --exclude '.git' \
-            --exclude '.github' \
-            --exclude 'member_pages/ludka/thesis' \
-            --exclude 'qnano/hawrylak-qnano-march2017.pdf' \
-            --exclude 'qnano/qnano-show-part2.pdf' \
-            ./ _site/
-          echo "Site bundle size:" $(du -sh _site | cut -f1)
-          echo "File count:" $(find _site -type f | wc -l)
+          git archive --format=tar HEAD | tar -x -C _site
+          rm -rf _site/member_pages/ludka/thesis
+          rm -f _site/qnano/hawrylak-qnano-march2017.pdf
+          rm -f _site/qnano/qnano-show-part2.pdf
+          echo "Site bundle size: $(du -sh _site | cut -f1)"
+          echo "File count: $(find _site -type f | wc -l)"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
