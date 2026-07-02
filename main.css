@@ -3288,6 +3288,51 @@ ul {
   font-style: italic;
 }
 
+/* Inline figure for individual publication items */
+.publication-item-with-figure {
+  display: flow-root;
+}
+
+.publication-figure {
+  margin: 0 0 var(--space-lg) 0;
+  text-align: center;
+}
+
+.publication-figure a {
+  display: block;
+  text-decoration: none;
+}
+
+.publication-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.publication-figure a:hover img {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.02);
+}
+
+.publication-figure figcaption {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  margin-top: var(--space-xs);
+  line-height: var(--line-height-normal);
+  font-style: normal;
+}
+
+@media (min-width: 768px) {
+  .publication-item-with-figure .publication-figure {
+    float: right;
+    width: min(300px, 42%);
+    margin: 0 0 var(--space-md) var(--space-lg);
+  }
+}
+
 /* Publications Call to Action */
 .publications-cta {
   background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
