@@ -901,7 +901,7 @@ button:focus {
   width: 95%;
   height: 95%;
   object-fit: cover;
-  object-position: center 15%; /* Focus on upper portion where face should be */
+  object-position: center 5%; /* Focus on upper portion where face should be */
 }
 
 /* Show more of the image on hover for tall images */
